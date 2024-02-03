@@ -128,3 +128,6 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# google stuff
+.newagent-deuf-9f0b5c01bc66.json
