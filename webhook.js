@@ -14,8 +14,10 @@ const languageCode = process.env.LANGUAGE_CODE;
 const sessionClient = new dialogflow.SessionsClient();
 const sessionPath = sessionClient.projectAgentSessionPath(projectId, sessionId);
 
-app.post('/webhook', async (req, res) => {
-    const { Body: text, From: phoneNumber } = req.body;
+app.get('/webhook', (req, res) => {
+    res.send('Webhook is working');
+});
+
 
     const request = {
         session: sessionPath,
