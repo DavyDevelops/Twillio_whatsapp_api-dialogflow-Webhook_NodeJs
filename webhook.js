@@ -18,6 +18,8 @@ app.get('/webhook', (req, res) => {
     res.send('Webhook is working');
 });
 
+app.post('/webhook', async (req, res) => {
+    const { Body: text, From: phoneNumber } = req.body;
 
     const request = {
         session: sessionPath,
